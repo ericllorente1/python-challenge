@@ -1,5 +1,6 @@
 import csv
 import os
+#use os.path.join to create a path for the file (as provided by tutor Limei Hou)
 file = os.path.join('Resources','election_data.csv')
 #create an output path for the output file
 outfile_path = os.path.join('analysis', 'Poll_results.txt')
@@ -19,8 +20,11 @@ with open(file,'r') as csv_file:
 #-----------------end of loop---------------------
 #use dictionary comprehesion to create keys for every unique value
 #the logic behind it is that keys cannot duplicate
+#https://www.geeksforgeeks.org/python-initialize-a-dictionary-with-only-keys-from-a-list/
+#every key will have a list that will later be appended with every vote for each candidate
 c_dict = {key: [] for key in vote}
-#create a list of unique values with the keys of the dictionary 
+#create a list of unique values with the keys of the dictionary
+#https://datatofish.com/dictionary-keys-as-list/ 
 uniques = list(c_dict.keys())
 #abbreviate names for reference later
 charles = uniques[0]

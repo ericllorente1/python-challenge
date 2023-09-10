@@ -61,7 +61,7 @@ print(printed_results)
 with open(output_file, 'w') as outfile:
     outfile.write(printed_results)
 
-open(outfile)
+
         
 
 
